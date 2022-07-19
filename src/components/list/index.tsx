@@ -1,5 +1,5 @@
 import style from "./list.module.scss";
-import Item from "./item";
+import Item from "./item/item";
 import { Iitem } from "../../types/task";
 
 interface Props {
