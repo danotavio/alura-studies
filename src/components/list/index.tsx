@@ -1,27 +1,28 @@
 import React from "react";
+import "./style.scss";
 
 function List() {
   const item = [
     {
       task: "React",
-      time: "02:00:00"
+      time: "02:00:00",
     },
     {
       task: "Javascript",
-      time: "01:00:00"
+      time: "01:00:00",
     },
     {
       task: "Typescript",
-      time: "03:00:00"
+      time: "03:00:00",
     },
   ];
 
   return (
-    <aside>
+    <aside className="listaTarefas">
       <h2>Estudos do dia</h2>
       <ul>
         {item.map((item, index) => (
-          <li key={index}>
+          <li key={index} className="item">
             <h3>{item.task}</h3>
             <span>{item.time}</span>
           </li>
