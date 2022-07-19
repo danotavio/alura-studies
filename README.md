@@ -1,3 +1,3 @@
 ## Alura Studies
 
-Criação de gerenciamento de tarefas conforme estudo de Typescript do curso da Alura
+Criação de um gerenciador de tarefas conforme estudo de Typescript do curso da Alura
