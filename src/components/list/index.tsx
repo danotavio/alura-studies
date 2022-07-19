@@ -18,7 +18,7 @@ function List() {
   ];
 
   return (
-    <aside className="listaTarefas">
+    <aside className="taskLists">
       <h2>Estudos do dia</h2>
       <ul>
         {item.map((item, index) => (

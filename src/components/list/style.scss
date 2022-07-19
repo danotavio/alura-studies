@@ -1,5 +1,5 @@
-.listaTarefas {
-    grid-area: tarefas;
+.taskLists {
+    grid-area: task;
     height: 100%;
   
     h2 {
@@ -51,16 +51,16 @@
     }
   }
   
-  .itemSelecionado {
+  .selectedItem {
     background-color: #292929;
     box-shadow: 2px 4px 4px #0000009F inset;
   }
   
-  .itemCompletado {
+  .itemCompleted {
     background-color: #566F42;
     cursor: auto;
   
-    .concluido {
+    .finish {
       display: block;
       background-image: url('../../assets/img/check-mark.svg');
       background-repeat: no-repeat;
