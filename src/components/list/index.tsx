@@ -1,30 +1,21 @@
 import style from "./list.module.scss";
 import Item from "./item";
+import { Iitem } from "../../types/task";
 
-export default function List() {
-  const item = [
-    {
-      task: "React",
-      time: "02:00:00",
-    },
-    {
-      task: "Javascript",
-      time: "01:00:00",
-    },
-    {
-      task: "Typescript",
-      time: "03:00:00",
-    },
-  ];
+
+export default function List({item}: {item: Iitem[]}) {
+
 
   return (
     <aside className={style.taskLists}>
-      <h2>Estudos do dia</h2>
+      <h2>
+        Estudos do dia
+      </h2>
       <ul>
         {item.map((item, index) => (
           <Item key={index} {...item} />
         ))}
       </ul>
     </aside>
-  )
-}
+  );
+};
