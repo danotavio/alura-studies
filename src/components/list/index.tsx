@@ -1,27 +1,21 @@
-import style from "./list.module.scss";
-import Item from "./item/item";
 import { Iitem } from "../../types/task";
+import Item from "./item/item";
+import style from "./list.module.scss";
 
 interface Props {
-  item: Iitem[],
-  selectTask: (selectedTask: Iitem) => void }
+  item: Iitem[];
+  taskSelect: (taskSelect: Iitem) => void;
+}
 
-export default function List({item, selectTask,}: Props) {
+export default function List({ item, taskSelect }: Props) {
   return (
     <aside className={style.taskLists}>
-      <h2>
-        Estudos do dia
-      </h2>
+      <h2>Estudos do dia</h2>
       <ul>
         {item.map((item) => (
-          <Item 
-            selectTask={selectTask}
-            key={item.id} 
-            {
-              ...item
-            } />
+          <Item taskSelect={taskSelect} key={item.id} {...item} />
         ))}
       </ul>
     </aside>
   );
-};
+}

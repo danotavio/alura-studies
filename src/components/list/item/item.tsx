@@ -2,7 +2,7 @@ import { Iitem } from "../../../types/task";
 import style from "./item.module.scss";
 
 interface Props extends Iitem {
-  selectTask: (selectedTask: Iitem) => void;
+  taskSelect: (selectedTask: Iitem) => void;
 }
 
 export default function Item({
@@ -11,13 +11,16 @@ export default function Item({
   selected,
   completed,
   id,
-  selectTask,
+  taskSelect,
 }: Props) {
   return (
     <li
-      className={`${style.item} ${selected ? style.selectedItem : ''}`}
+      className={`${style.item} ${selected ? style.selectedItem : ""} ${
+        completed ? style.itemCompleted : ""
+      }`}
       onClick={() =>
-        selectTask({
+        !completed &&
+        taskSelect({
           task,
           time,
           selected,
@@ -28,6 +31,9 @@ export default function Item({
     >
       <h3>{task}</h3>
       <span>{time}</span>
+      {completed && (
+        <span className={style.finish} aria-label="Item concluído"></span>
+      )}
     </li>
   );
 }
